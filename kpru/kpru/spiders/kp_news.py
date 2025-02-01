@@ -6,6 +6,18 @@ from scrapy import Request
 from scrapy.http import Response
 
 
+class Article(scrapy.Item):
+    title = scrapy.Field()
+    pub_date = scrapy.Field()
+    author = scrapy.Field()
+    header_photo_url = scrapy.Field(default=None)
+    header_photo_base64 = scrapy.Field(default=None)
+    description = scrapy.Field()
+    source_url = scrapy.Field()
+    keywords = scrapy.Field()
+    article_text = scrapy.Field()
+
+
 PAGINATION_SIZE = 25
 
 
